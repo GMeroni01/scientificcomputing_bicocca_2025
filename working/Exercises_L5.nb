@@ -1,0 +1,373 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     12172,        363]
+NotebookOptionsPosition[     10268,        321]
+NotebookOutlinePosition[     10668,        337]
+CellTagsIndexPosition[     10625,        334]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Lecture 5", "Section",
+ CellChangeTimes->{{3.990546513231882*^9, 
+  3.9905465162595463`*^9}},ExpressionUUID->"086a80a2-b376-9e49-800c-\
+7e2edb5809cf"],
+
+Cell[CellGroupData[{
+
+Cell["Exercise 2", "Subsection",
+ CellChangeTimes->{{3.9905465289053745`*^9, 3.9905465317875214`*^9}, 
+   3.990546657241869*^9},ExpressionUUID->"e535a0fb-52cd-ca43-8e1f-\
+504c73f82734"],
+
+Cell[TextData[{
+ "Q2: Integrate the expression f(x) = sin(x) ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["e", 
+    RowBox[{"-", "x"}]], TraditionalForm]],ExpressionUUID->
+  "0d4eef0c-cc46-1246-8e6e-bbd330ccc94a"],
+ ", and then take its derivative."
+}], "Text",
+ CellChangeTimes->{{3.99054660443902*^9, 
+  3.990546608327751*^9}},ExpressionUUID->"f1d13085-b4ce-df49-bf0d-\
+ba3880183058"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"f", "[", "x_", "]"}], ":=", 
+    RowBox[{
+     RowBox[{"Sin", "[", "x", "]"}], " ", 
+     RowBox[{"Exp", "[", 
+      RowBox[{"-", "x"}], "]"}]}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"F", "[", "x_", "]"}], "=", 
+    RowBox[{"Integrate", "[", 
+     RowBox[{
+      RowBox[{"f", "[", "x", "]"}], ",", "x"}], "]"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"Fp", "[", "x_", "]"}], "=", 
+    RowBox[{"Simplify", "[", 
+     RowBox[{"D", "[", 
+      RowBox[{
+       RowBox[{"F", "[", "x", "]"}], ",", "x"}], "]"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<Function: f(x) = \>\"", ",", 
+    RowBox[{"f", "[", "x", "]"}]}], "]"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<Primitive function: F(x) = \>\"", ",", 
+    RowBox[{"F", "[", "x", "]"}]}], "]"}], "\[IndentingNewLine]"}], "\n", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Derivative of the primitive: F'(x) = \>\"", ",", 
+   RowBox[{"Fp", "[", "x", "]"}]}], "]"}]}], "Code",
+ CellChangeTimes->{{3.9905465502091637`*^9, 3.9905465651791*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"62ad0bce-d65e-bb4b-a13d-489b953d3bca"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Function: f(x) = \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"-", "x"}]], " ", 
+    RowBox[{"Sin", "[", "x", "]"}]}]}],
+  SequenceForm["Function: f(x) = ", E^(-$CellContext`x) Sin[$CellContext`x]],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.9905465759317417`*^9, 3.99054657659816*^9}},
+ CellLabel->
+  "During evaluation of \
+In[7]:=",ExpressionUUID->"1d05f38a-6b99-394e-a8eb-76cce42906b4"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Primitive function: F(x) = \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["1", "2"]}], " ", 
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"-", "x"}]], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"Cos", "[", "x", "]"}], "+", 
+      RowBox[{"Sin", "[", "x", "]"}]}], ")"}]}]}],
+  SequenceForm[
+  "Primitive function: F(x) = ", Rational[-1, 2] 
+   E^(-$CellContext`x) (Cos[$CellContext`x] + Sin[$CellContext`x])],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.9905465759317417`*^9, 3.990546576613983*^9}},
+ CellLabel->
+  "During evaluation of \
+In[7]:=",ExpressionUUID->"cc8c357d-fc42-3d4d-9598-0fdb209e1535"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Derivative of the primitive: F'(x) = \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"-", "x"}]], " ", 
+    RowBox[{"Sin", "[", "x", "]"}]}]}],
+  SequenceForm[
+  "Derivative of the primitive: F'(x) = ", E^(-$CellContext`x) 
+   Sin[$CellContext`x]],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.9905465759317417`*^9, 3.990546576613983*^9}},
+ CellLabel->
+  "During evaluation of \
+In[7]:=",ExpressionUUID->"f85e3f01-ac02-7f4c-8f35-ecca5d038ab3"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Exercise 3", "Subsection",
+ CellChangeTimes->{{3.9905466407065697`*^9, 
+  3.990546643909889*^9}},ExpressionUUID->"fe31424c-9506-634b-ad7c-\
+238e78d30d58"],
+
+Cell["\<\
+Q3: Solve the equation  x ln(x) - 3 x + 10 = 6, both symbolically and \
+numerically.\
+\>", "Text",
+ CellChangeTimes->{
+  3.990546689861553*^9},ExpressionUUID->"47a96fc5-a9ae-3b4f-a5a3-\
+cb823cd74b88"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"eq", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"x", " ", 
+       RowBox[{"Log", "[", "x", "]"}]}], "-", 
+      RowBox[{"3", " ", "x"}], "+", "10"}], "==", "6"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<Equation: \>\"", ",", "eq"}], "]"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"Numeric", " ", "solution"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"xNum", "=", 
+    RowBox[{"Sort", "[", 
+     RowBox[{"x", "/.", " ", 
+      RowBox[{"NSolve", "[", 
+       RowBox[{"eq", ",", "x", ",", "Reals"}], "]"}]}], "]"}]}], ";"}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<Numeric solutions = \>\"", ",", "xNum"}], "]"}], "\n", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"Simbolic", " ", "solution"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"sym", "=", 
+    RowBox[{"Reduce", "[", 
+     RowBox[{"eq", ",", "x", ",", "Reals"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<Symbolic solution: \>\"", ",", "sym"}], "]"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Numeric", " ", "values", " ", "of", " ", "the", " ", "simbolic", " ", 
+    "solutions"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"xSym", "=", 
+    RowBox[{"Cases", "[", 
+     RowBox[{"sym", ",", 
+      RowBox[{
+       RowBox[{"x", "==", "val_"}], ":>", "val"}], ",", "Infinity"}], "]"}]}],
+    ";"}], "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"xSymNum", "=", 
+    RowBox[{"Sort", "[", 
+     RowBox[{"N", "[", "xSym", "]"}], "]"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<Numeric values of symbolic solutions = \>\"", ",", 
+    "xSymNum"}], "]"}], "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{"Comparison", " ", "of", " ", "results"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Simbolic and numeric solution matching: \>\"", ",", 
+   RowBox[{
+    RowBox[{"Sort", "[", "xSymNum", "]"}], "===", 
+    RowBox[{"Sort", "[", "xNum", "]"}]}]}], "]"}]}], "Code",
+ CellChangeTimes->{3.990546734888195*^9},
+ CellLabel->"In[13]:=",ExpressionUUID->"08374a3e-1b58-8e46-bc8d-76977ad8c3ea"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Equation: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"10", "-", 
+     RowBox[{"3", " ", "x"}], "+", 
+     RowBox[{"x", " ", 
+      RowBox[{"Log", "[", "x", "]"}]}]}], "\[Equal]", "6"}]}],
+  SequenceForm[
+  "Equation: ", 10 - 3 $CellContext`x + $CellContext`x Log[$CellContext`x] == 
+   6],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9905467388087254`*^9},
+ CellLabel->
+  "During evaluation of \
+In[13]:=",ExpressionUUID->"60195926-2d00-ba40-b36c-bc0572ee7b01"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Numeric solutions = \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"1.5688309034084709`", ",", "15.522896611261862`"}], "}"}]}],
+  SequenceForm[
+  "Numeric solutions = ", {1.5688309034084709`, 15.522896611261862`}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9905467394112206`*^9},
+ CellLabel->
+  "During evaluation of \
+In[13]:=",ExpressionUUID->"d4a672f1-7f00-1446-b942-87a33d740620"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Symbolic solution: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"x", "\[Equal]", 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"3", "+", 
+       RowBox[{"ProductLog", "[", 
+        RowBox[{"-", 
+         FractionBox["4", 
+          SuperscriptBox["\[ExponentialE]", "3"]]}], "]"}]}]]}], "||", 
+    RowBox[{"x", "\[Equal]", 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"3", "+", 
+       RowBox[{"ProductLog", "[", 
+        RowBox[{
+         RowBox[{"-", "1"}], ",", 
+         RowBox[{"-", 
+          FractionBox["4", 
+           SuperscriptBox["\[ExponentialE]", "3"]]}]}], "]"}]}]]}]}]}],
+  SequenceForm["Symbolic solution: ", 
+   Or[$CellContext`x == E^(3 + ProductLog[(-4) E^(-3)]), $CellContext`x == 
+    E^(3 + ProductLog[-1, (-4) E^(-3)])]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9905467395698204`*^9},
+ CellLabel->
+  "During evaluation of \
+In[13]:=",ExpressionUUID->"69bae5df-7895-2246-93eb-4dc5e60da969"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Numeric values of symbolic solutions = \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"1.568830903408471`", ",", "15.52289661126186`"}], "}"}]}],
+  SequenceForm[
+  "Numeric values of symbolic solutions = ", {1.568830903408471, 
+   15.52289661126186}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9905467395698204`*^9},
+ CellLabel->
+  "During evaluation of \
+In[13]:=",ExpressionUUID->"547e2659-cc53-c44f-91e3-4d6dc1310c0c"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Simbolic and numeric solution matching: \"\>", "\[InvisibleSpace]",
+    "True"}],
+  SequenceForm["Simbolic and numeric solution matching: ", True],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.990546739585705*^9},
+ CellLabel->
+  "During evaluation of \
+In[13]:=",ExpressionUUID->"4d69aa97-08f3-834d-afca-6a97060dd70a"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1141.2, 568.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"14.3 for Microsoft Windows (64-bit) (July 8, 2025)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"1b55f5eb-0952-024b-aa8b-3ebbb086bfe2"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 156, 3, 66, "Section",ExpressionUUID->"086a80a2-b376-9e49-800c-7e2edb5809cf"],
+Cell[CellGroupData[{
+Cell[757, 29, 185, 3, 53, "Subsection",ExpressionUUID->"e535a0fb-52cd-ca43-8e1f-504c73f82734"],
+Cell[945, 34, 388, 11, 33, "Text",ExpressionUUID->"f1d13085-b4ce-df49-bf0d-ba3880183058"],
+Cell[CellGroupData[{
+Cell[1358, 49, 1321, 37, 225, "Code",ExpressionUUID->"62ad0bce-d65e-bb4b-a13d-489b953d3bca"],
+Cell[CellGroupData[{
+Cell[2704, 90, 496, 12, 22, "Print",ExpressionUUID->"1d05f38a-6b99-394e-a8eb-76cce42906b4"],
+Cell[3203, 104, 705, 19, 35, "Print",ExpressionUUID->"cc8c357d-fc42-3d4d-9598-0fdb209e1535"],
+Cell[3911, 125, 544, 14, 22, "Print",ExpressionUUID->"f85e3f01-ac02-7f4c-8f35-ecca5d038ab3"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4516, 146, 160, 3, 53, "Subsection",ExpressionUUID->"fe31424c-9506-634b-ad7c-238e78d30d58"],
+Cell[4679, 151, 210, 6, 33, "Text",ExpressionUUID->"47a96fc5-a9ae-3b4f-a5a3-cb823cd74b88"],
+Cell[CellGroupData[{
+Cell[4914, 161, 2420, 68, 436, "Code",ExpressionUUID->"08374a3e-1b58-8e46-bc8d-76977ad8c3ea"],
+Cell[CellGroupData[{
+Cell[7359, 233, 527, 15, 22, "Print",ExpressionUUID->"60195926-2d00-ba40-b36c-bc0572ee7b01"],
+Cell[7889, 250, 454, 11, 22, "Print",ExpressionUUID->"d4a672f1-7f00-1446-b942-87a33d740620"],
+Cell[8346, 263, 1001, 27, 32, "Print",ExpressionUUID->"69bae5df-7895-2246-93eb-4dc5e60da969"],
+Cell[9350, 292, 490, 12, 22, "Print",ExpressionUUID->"547e2659-cc53-c44f-91e3-4d6dc1310c0c"],
+Cell[9843, 306, 373, 9, 22, "Print",ExpressionUUID->"4d69aa97-08f3-834d-afca-6a97060dd70a"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
