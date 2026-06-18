@@ -62,5 +62,5 @@ The workflow file is located at: .github/workflows/tests.yml
 The workflow automatically runs the test at every commit, with options edited to make sure the code cannot be committed if the tests fail.
 
 The effectiveness of the control was verified by intentionally introducing a failing test and then fixing it. The Actions history shows the failed workflow and the subsequent successful run corresponding to the commits:
-- "Test failure check" → failed test
-- "Fix failing check" → tests passed again
+- "Test failure check" --> failed test
+- "Fix failing check" --> tests passed again
