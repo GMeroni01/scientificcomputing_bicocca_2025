@@ -7,7 +7,7 @@ https://github.com/GMeroni01/gaussiansmooth
 
 ## Repository organization
 
-'''text
+```text
 C:.
 │  example.py
 │  README.md
@@ -25,7 +25,7 @@ C:.
 |
 └───tests
         test_smoothing.py
-'''
+```
 
 
 ## Q1 - I love pip
