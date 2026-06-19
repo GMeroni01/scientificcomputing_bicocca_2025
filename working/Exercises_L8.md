@@ -46,7 +46,7 @@ The package was:
 
 The published package is available on TestPyPI:
 
-https://test.pypi.org/project/gaussiansmooth-giorgiom/0.0.6/
+https://test.pypi.org/project/gaussiansmooth-giorgiom/0.1/
 
 
 ## Q2 - My own test
