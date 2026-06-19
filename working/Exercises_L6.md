@@ -1,10 +1,28 @@
-# Scientific Computing with Python – Git and GitHub Exercises
+# Lecture 6 – Exercises
 
 The complete implementation of the exercises Q1, Q2, Q3 and Q5 is available in the following GitHub repository:
 
 https://github.com/GMeroni01/project-1st.git
 
 Note: The repository is private. Please accept the GitHub invitation to access the repository.
+
+## Repository organization
+
+```text
+C:.
+│   .gitignore
+│   README.md
+│   Scattreing Correction simulation.py
+│
+├───.github
+│   └───workflows
+│           check-readme.yml
+│
+└───Abstract FOM 2026
+        diff.pdf
+        diff.tex
+        main.tex
+```
 
 ## Q1 – Your Next Research Project
 
@@ -31,10 +49,8 @@ The project source file is: Abstract FOM 2026/main.tex.
 
 ## Q5 – Latexdiff
 
-The LaTeX source file was committed, modified, committed again, and synchronized to GitHub.
+The main.tex file was committed, modified, committed again, and pushed to the remote GitHub repository.
 
 Two versions of the document were extracted from the Git history and compared using: latexdiff old.tex new.tex > diff.tex.
 
-The generated comparison files are: Abstract FOM 2026/diff.tex and Abstract FOM 2026/diff.pdf.
-
-The resulting document highlights the differences between the two versions of the abstract.
+The generated comparison files Abstract FOM 2026/diff.tex (uploaded also as pdf) highlights the differences between the two versions of the abstract.
