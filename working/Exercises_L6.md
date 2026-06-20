@@ -26,9 +26,9 @@ C:.
 
 ## Q1 – Your Next Research Project
 
-A Git repository has been created for my current research project and initialized locally using Git.
+A Git repository was created for my current research project and initialized locally using Git. The repository was connected to a remote GitHub repository and synchronized through commits and pushes. 
 
-The repository was connected to a remote GitHub repository and synchronized through commits and pushes. The project is therefore under version control both locally and remotely.
+The project is therefore under version control both locally and remotely.
 
 ## Q2 – Egocentric
 
