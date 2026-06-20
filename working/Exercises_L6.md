@@ -53,4 +53,4 @@ The main.tex file was committed, modified, committed again, and pushed to the re
 
 Two versions of the document were extracted from the Git history and compared using: latexdiff old.tex new.tex > diff.tex.
 
-The generated comparison files Abstract FOM 2026/diff.tex (uploaded also as pdf) highlights the differences between the two versions of the abstract.
+The generated comparison files Abstract FOM 2026/diff.tex (uploaded also as pdf for viewing purposes) highlights the differences between the two versions of the abstract.
