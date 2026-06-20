@@ -56,10 +56,11 @@ A unit test has been implemented for the Gaussian smoothing code used in Q1.
 The tested code is the function "gaussian_smooth()" located in: gaussiansmooth/smooth.py.
 
 The unit test is implemented using pytest and is located in: tests/test_smoothing.py.
-The test verifies the correct behaviour of the smoothing function and continuous integration is implemented through GitHub Actions.
+The test verifies the correct behaviour of the smoothing function.
 
-The workflow file is located at: .github/workflows/tests.yml.
-The workflow automatically runs the test at every commit, with options edited to make sure the code cannot be committed if the tests fail.
+Continuous integration is implemented through GitHub Actions. The workflow file is located in .github/workflows/tests.yml. The workflow automatically runs the test for every commit pushed to the repository.
+
+In addition, GitHub branch protection rules were configured to require successful completion of the test before changes can be merged into the main branch.
 
 The effectiveness of the control was verified by intentionally introducing a failing test and then fixing it. The Actions history shows the failed workflow and the subsequent successful run corresponding to the commits:
 - "Test failure check" --> failed test
